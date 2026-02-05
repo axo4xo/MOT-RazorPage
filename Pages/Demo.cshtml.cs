@@ -76,6 +76,7 @@ public class DemoModel : PageModel
 
         return Page();
     }
+    
 
     // ===== HANDLER: OnPost =====
     // Voláno po odeslání formuláře (method="post")

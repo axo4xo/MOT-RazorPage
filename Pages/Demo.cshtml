@@ -26,7 +26,7 @@
         <div class="alert alert-info alert-dismissible">
             @Model.Message
         </div>
-    }
+    }   
 
     <div class="row">
         @* ===== LEVÝ SLOUPEC: SEZNAM ČLÁNKŮ ===== *@
@@ -54,7 +54,9 @@
                     *@
                     @foreach (var article in Model.Articles)
                     {
-                        <div class="card mb-2">
+                        // po kliknuti na <a> sestavi route, ktera na OnGetRead u Article posle ?id=Id&handler=Read 
+                        // to cte OnGetRead(int id), podle Id getne articles a precte je
+                        <a class="card mb-2" asp-page="/Article" asp-page-handler="Read" asp-route-id="@article.Id">
                             <div class="card-body py-2">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <div>
@@ -77,7 +79,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     }
 
                     <hr class="my-3"/>

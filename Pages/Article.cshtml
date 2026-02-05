@@ -1,0 +1,18 @@
+@page
+@model ArticlePage
+
+@{
+    ViewData["Title"] = Model.Title + " by " + Model.Author;
+}
+
+<div class="container">
+    <h1>
+        @Model.Title
+    </h1>
+    <h2 class="card">
+        Napsal @Model.Author
+    </h2>
+    <p>
+        @Model.Content
+    </p>
+</div>
