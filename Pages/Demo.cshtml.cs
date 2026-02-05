@@ -37,7 +37,6 @@ public class DemoModel : PageModel
 
     // Příznak, zda jsme v režimu editace
     public bool IsEditing { get; set; }
-
     // ===== HANDLER: OnGet =====
     // Voláno při běžném načtení stránky (bez parametru)
     // URL: /Demo
